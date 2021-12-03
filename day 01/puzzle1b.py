@@ -1,4 +1,4 @@
-inputFile = './puzzle1/input.txt'
+inputFile = './input.txt'
 buffer = [0, 0, 0]
 bindex = 0
 

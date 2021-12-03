@@ -5,7 +5,7 @@ position = 0
 depth = 0
 aim = 0
 
-with open('./puzzle2/input.txt') as f:
+with open('./input.txt') as f:
     for line in f:
         direction, distance = line.split()
         distance = int(distance)
