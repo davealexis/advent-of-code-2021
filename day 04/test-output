@@ -1,0 +1,54 @@
+--- Calling number 7 ---
+--- Calling number 4 ---
+--- Calling number 9 ---
+--- Calling number 5 ---
+--- Calling number 11 ---
+--- Calling number 17 ---
+--- Calling number 23 ---
+--- Calling number 2 ---
+--- Calling number 0 ---
+--- Calling number 14 ---
+--- Calling number 21 ---
+--- Calling number 24 ---
+Winner - Row 1
+[14][21][17][24][ 4]
+ 10  16  15 [ 9] 19 
+ 18   8 [23] 26  20 
+ 22 [11] 13   6 [ 5]
+[ 2][ 0] 12   3 [ 7]
+Board 2 won! Score: 4512 (Sum of unmarked: 188, Last number called: 24)
+--------------
+
+--- Calling number 10 ---
+--- Calling number 16 ---
+Winner - Row 3
+ 22  13 [17][11][ 0]
+  8 [ 2][23][ 4][24]
+[21][ 9][14][16][ 7]
+  6 [10]  3  18 [ 5]
+  1  12  20  15  19 
+Board 0 won! Score: 2192 (Sum of unmarked: 137, Last number called: 16)
+--------------
+
+--- Calling number 13 ---
+Winner - Col 3
+  3  15 [ 0][ 2] 22 
+[ 9] 18 [13][17][ 5]
+ 19   8 [ 7] 25 [23]
+ 20 [11][10][24][ 4]
+[14][21][16] 12   6 
+Board 1 won! Score: 1924 (Sum of unmarked: 148, Last number called: 13)
+--------------
+
+--- Calling number 6 ---
+--- Calling number 15 ---
+--- Calling number 25 ---
+--- Calling number 12 ---
+--- Calling number 22 ---
+--- Calling number 18 ---
+--- Calling number 20 ---
+--- Calling number 8 ---
+--- Calling number 19 ---
+--- Calling number 3 ---
+--- Calling number 26 ---
+--- Calling number 1 ---
