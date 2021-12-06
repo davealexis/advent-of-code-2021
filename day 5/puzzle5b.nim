@@ -2,13 +2,15 @@ import
     strutils,
     std/strformat
 
-const inputFileName = "./input.txt"
-const maxRows = 1000
-const maxCols = 1000
+const 
+    inputFileName = "./input.txt"
+    maxRows = 1000
+    maxCols = 1000
 
 var 
     ventMatrix: array[0..maxRows - 1, array[0..maxCols - 1, int]]
 
+# .............................................................................
 proc checkMatrix(): int =
     var overlaps = 0
 
@@ -39,7 +41,6 @@ proc processData() =
 
     while input.readLine(line):
         let lineSegments = line.split(" -> ")
-        # echo line
 
         let startStr = lineSegments[0].strip().split(",")
         let startX = parseInt(startStr[0])
@@ -61,18 +62,14 @@ proc processData() =
                     colStep = 1
                     rowStep = 1
 
-                if startX > endX:
-                    colStep = -1
-
-                if startY > endY:
-                    rowStep = -1
+                colStep = if startX > endX: -1 else: 1
+                rowStep = if startY > endY: -1 else: 1
 
                 var
                     row = startY
                     col = startX
 
                 while true:
-                    # echo &"Point: {row}/{col}"
                     ventMatrix[row][col] += 1
                     
                     if row == endY or col == endX:
@@ -87,7 +84,4 @@ proc processData() =
 processData()
 
 # Check matrix for points where at least 2 lines overlap
-echo checkMatrix()
-
-
-# echo &"\nOverlaps: {overlaps}"
+echo &"Overlaps: {checkMatrix()}"
