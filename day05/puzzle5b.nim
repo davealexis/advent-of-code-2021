@@ -8,14 +8,14 @@ const
     maxCols = 1000
 
 var 
-    ventMatrix: array[0..maxRows - 1, array[0..maxCols - 1, int]]
+    ventMatrix: array[0..maxRows, array[0..maxCols, int]]
 
 # .............................................................................
 proc checkMatrix(): int =
     var overlaps = 0
 
-    for row in 0..maxRows-1:
-        for col in 0..maxCols-1 :
+    for row in 0..maxRows:
+        for col in 0..maxCols :
             let value = ventMatrix[row][col]
 
             if value >= 2:
