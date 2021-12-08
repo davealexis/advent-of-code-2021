@@ -14,9 +14,15 @@ for i in data:
 
 for day in range(0, 256):
     print(f"Day {day}\r", end="")
-    cursor.execute("update fish set fish = coalesce(fish, 0) + (select sum(fish) from fish where counter = 0) where counter = 9;")
-    cursor.execute("update fish set fish = coalesce(fish, 0) + (select sum(fish) from fish where counter = 0) where counter = 7;")
-    cursor.execute("update fish set fish = 0 where counter = 0;")
+    cursor.execute("""
+        update fish 
+            set fish = 
+                case 
+                    when counter in (7, 9) then coalesce(fish, 0) + (select sum(fish) from fish where counter = 0) 
+                    when counter = 0 then 0
+                end
+        where counter in (0, 7, 9);
+    """)
     cursor.execute("update fish set fish = (select fish from fish pd where pd.counter = fish.counter + 1);")
     conn.commit()
 
